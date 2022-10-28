@@ -1,0 +1,52 @@
+.circle {
+  border: 1px solid black;
+  border-radius: 70%;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transition: background-color 1s ease-in-out;
+}
+.circle-red {
+  border: 1px solid rgb(244, 151, 151);
+  border-radius: 70%;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: background-color 1s ease-in-out;
+}
+.circle-green {
+  border: 1px solid black;
+  border-radius: 70%;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: background-color 1s ease-in-out;
+}
+.circle-yellow {
+  border: 1px solid black;
+  border-radius: 70%;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  transition: background-color 1s ease-in-out;
+}
+.main {
+  border: 1px solid black;
+  height: 310px;
+  width: 105px;
+  background-color: black;
+  margin-left: 50%;
+}
+.poll {
+  left: 10px;
+  border: 1px solid black;
+  margin-bottom: 300px;
+  padding: 10px;
+  margin-left: 1px;
+  width: 2px;
+  height: 130px;
+  background-color:black;
+}
+h1{
+    margin-left: 40%;
+}
