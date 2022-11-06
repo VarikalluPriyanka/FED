@@ -1,57 +1,31 @@
-import React, { Component } from "react";
-import "./style.css";
+import React, { Component } from 'react';
 
-export class ChangeColors extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      showRed: true,
-      showYellow: false,
-      showGreen: false,
-    };
-  }
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ showRed: false, showYellow: true, showGreen: false });
-    }, 1000);
-  }
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.showYellow) {
-      setTimeout(() => {
-        this.setState({ showGreen: true, showRed: false, showYellow: false });
-      }, 1000);
+
+class Page extends Component {
+ constructor(props){
+   super(props);
+   this.state={color:"black"}
+}
+    render() {
+
+        return (
+            <div>
+
+                <div style={{ background: "#f0f0f0f" }}>
+                    <h3 style={{ color: this.state.color }}>Heading</h3>
+                    <p style={{ color: '#706c61' }}> This is a text...</p>
+                </div>
+                
+                    <div>
+                        <button onClick={()=>this.setState({color:"white"})}> White </button>
+                        <button  onClick={()=>this.setState({color:"purple"})}> Purple </button>
+                        <button  onClick={()=>this.setState({color:"red"})}> Red </button>
+                        <button  onClick={()=>this.setState({color:"green"})}> Green </button>
+                    </div>
+            </div>
+        );
     }
-    if (this.state.showRed) {
-      setTimeout(() => {
-        this.setState({ showGreen: false, showRed: false, showYellow: true });
-      }, 1000);
-    }
-    if (this.state.showGreen) {
-      setTimeout(() => {
-        this.setState({ showGreen: false, showRed: true, showYellow: false });
-      }, 1000);
-    }
-  }
-  render() {
-    return (
-      <div>
-        <h1>TRAFFIC LIGHTS</h1>
-        <div className="main">
-            <center>
-          <div className={this.state.showRed ? "circle-red" : "circle"}></div>
-          <div
-            className={this.state.showYellow ? "circle-yellow" : "circle"}
-          ></div>
-          <div
-            className={this.state.showGreen ? "circle-green" : "circle"}
-          ></div>
-          <div className="poll"></div>
-          </center>
-        </div>
-      </div>
-    );
-  }
 }
 
-export default ChangeColors;
+export default Page;
